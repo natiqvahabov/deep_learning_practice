@@ -63,6 +63,7 @@ classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = [
 
 # Fitting the ANN to the Training set
 classifier.fit(X_train, y_train, batch_size = 10, nb_epoch = 100)
+# classifier received 83.4 % average correctness after 100 epoches
 
 y_pred = classifier.predict(X_test)
 
@@ -70,3 +71,5 @@ y_pred = classifier.predict(X_test)
 from sklearn.metrics import confusion_matrix
 
 cm = confusion_matrix(y_test,y_pred)
+# true outcomes of cm were 84.2 % of all test data 
+# 1684 out of 2000
